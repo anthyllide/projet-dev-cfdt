@@ -1,0 +1,164 @@
+@font-face {
+font-family: 'GothamCondensed-bold';
+src: url('GothamCondensed-Bold.otf') format('truetype');
+}
+
+@font-face {
+font-family: 'GothamCondensed-book';
+src: url('GothamCondensed-Book.otf') format('truetype');
+}
+
+@font-face {
+font-family: 'GothamCondensed-light';
+src: url('GothamCondensed-Light.otf') format('truetype');
+}
+
+@font-face {
+font-family: 'GothamCondensed-medium';
+src: url('GothamCondensed-Medium.otf') format('truetype');
+}
+
+div.listPDF h2 {
+
+	color: #e75c21;
+	font-family: GothamCondensed-bold;
+	padding-bottom: 10px;
+	border-bottom: solid 2px #e75c21;
+	width: 35%;
+	margin-bottom: 30px !important;	
+	font-size: 2.5em !important;
+}
+
+div.listPDF p {
+	font-family: GothamCondensed-book;
+	font-size: 1.4rem;
+}
+
+div.listPDF ul {
+	padding-left: 0 !important;
+}
+
+div.listPDF ul li {
+	list-style-type: none;
+	font-family: GothamCondensed-light;
+	font-size: 1.2rem;
+	width : 50%;
+	border-bottom : solid 1px #cecece;
+	border-left: solid 1px #cecece;
+	border-right: solid 1px #cecece;
+	border-top: 1px #cecece dotted;
+	padding: 10px 0 10px 2%;
+	margin-top: 10px;
+}
+
+div.listPDF ul li a {
+	border-bottom : none !important;
+	text-decoration: none !important;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+div.listPDF ul li:hover {
+	cursor: pointer;
+}
+
+div.listPDF ul li:hover a {
+	color : #000000 ;
+}
+
+
+div.listPDF ul li a div{
+	display: block;
+}
+
+div.listPDF ul li a div.pdfPicto {
+	margin-right: 2px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+div.listPDF ul li a div.pdfPicto span {
+	display: block;
+	color :#a00b24;
+	font-weight: bold;
+	font-style: oblique;
+	margin-left: 12em; 
+}
+
+div.listPDF ul li a div.pdfPicto span, div.listPDF ul li a div.pdfPicto img {
+	display: block;
+	width: 2rem;
+	margin-left: 0.8em;
+}
+
+/* Styles effet accordion */
+
+div.listPDF h3.accordion {
+	color: #e75c21;
+	padding-bottom: 10px;
+	border-bottom: solid 2px #e75c21;
+	width: 50%;
+	margin-bottom: 30px;
+	font-size: 1.3rem;
+	font-family: GothamCondensed-light;
+}
+
+div.listPDF h3.accordion span {
+	color :#a00b24;
+	font-weight: bold;
+	font-style: oblique;
+ }
+
+div.listPDF .accordion:after {
+  content: '\0002B'; /* Unicode character for arrow */
+  font-size: 2rem ;
+  float: right;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+div.listPDF .active:after, div.listPDF .accordion:hover:after {
+  content: "\2212";
+  margin-top: -5px;
+}
+
+div.listPDF .active, div.listPDF .accordion:hover {
+	background-color: #e75c21;
+	color: #ffffff !important;
+	font-weight: bold;
+	padding-left: 1.2em;
+	padding-bottom: 2px !important;
+}
+
+.blocDetail {
+  display: none;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+/* version mobile */
+@media screen and (max-width: 485px){
+
+	div.listPDF ul li {
+		width: 100%;
+		font-size: 1rem;
+	}
+
+	div.listPDF p {
+		font-size: 1.2rem;
+	}
+
+	div.listPDF h2 {
+		font-size: 1.5em !important;
+		width : 100%;
+	}
+
+	div.listPDF h3.accordion {
+		width: 100%;
+		font-size : 1.2rem;
+	}
+}

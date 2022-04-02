@@ -1,0 +1,54 @@
+div.menuVignettes.menuVignettesMSA, div.menuVignettes.menuVignettesEspaceElus {
+	display: flex;
+	margin-top: 25px;
+}
+
+
+div.menuVignettes.menuVignettesMSA div, div.menuVignettes.menuVignettesEspaceElus div{
+	font-weight: bold;
+	background-color: #e75c21 ;
+	border: solid 3px #e75c21;
+	border-radius: 5px;
+	height: 80px;
+	width: 20%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 4%;
+}
+
+div.menuVignettes.menuVignettesMSA div a, div.menuVignettes.menuVignettesEspaceElus div a{
+	cursor:pointer;
+	color:#FFFFFF !important;
+}
+
+div.menuVignettes.menuVignettesMSA div:hover, div.menuVignettes.menuVignettesEspaceElus div:hover {
+	border: solid 3px #eaeaea;
+	background-color: #eaeaea;
+}
+
+div.menuVignettes.menuVignettesMSA div:hover a, div.menuVignettes.menuVignettesEspaceElus div:hover a {
+	background-color: #eaeaea;
+	color:#e75c21 !important;
+}
+
+
+/* version mobile */
+@media screen and (max-width: 485px){
+
+	div.menuVignettes.menuVignettesMSA, div.menuVignettes.menuVignettesEspaceElus {
+		flex-direction: column;
+		align-items: center;
+	}
+
+
+	div.menuVignettes.menuVignettesEspaceElus {
+		margin-top: 0;
+	}
+
+	div.menuVignettes.menuVignettesMSA div, div.menuVignettes.menuVignettesEspaceElus div {
+		width: 90%;
+		margin-bottom: 10px;
+	}		
+
+}

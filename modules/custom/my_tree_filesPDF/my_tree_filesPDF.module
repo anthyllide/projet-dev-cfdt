@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+
+function my_tree_filesPDF_theme() {
+
+	$theme = [];
+
+	$theme['my_tree_filesPDF'] = [
+    'variables' => [
+    	'title'=> NULL,
+    	'repImg' => NULL,
+    	'files_tab1'=> array(),
+    	'files_tab2' => array(),
+    	'topicNew_tab' => array()
+    	],
+ 	 ];
+
+ 	 return $theme;
+  
+}

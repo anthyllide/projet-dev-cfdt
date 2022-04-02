@@ -1,0 +1,270 @@
+/**
+ * @file
+ * Styles for menus in Bartik.
+ */
+@font-face {
+font-family: 'GothamCondensed-bold';
+src: url('../../font/GothamCondensed-Bold.otf') format('truetype');
+}
+
+@font-face {
+font-family: 'GothamCondensed-book';
+src: url('../../font/GothamCondensed-Book.otf') format('truetype');
+}
+
+@font-face {
+font-family: 'GothamCondensed-light';
+src: url('../../font/GothamCondensed-Light.otf') format('truetype');
+}
+
+@font-face {
+font-family: 'GothamCondensed-medium';
+src: url('../../font/GothamCondensed-Medium.otf') format('truetype');
+}
+
+/* This is needed to override ul.menu styles in menu.theme.css */
+ul.menu {
+  margin: 0;
+  padding: 0 0 0.25em 1em;
+}
+
+/* This is needed to override [dir="rtl"] ul.menu styles in menu.theme.css */
+[dir="rtl"] ul.menu {
+  margin: 0;
+}
+
+#block-cfdt-theme-main-menu {
+    height: 48px;
+    background-color: #e75c21;
+    margin-top: 30px;
+    border: 1px solid #e75c21;
+    border-radius: 10px;
+}
+
+#block-cfdt-theme-main-menu > div:nth-child(2) > ul:nth-child(5){
+	height : 55px;
+	/*background-color: #eaeaea;*/
+}
+
+/*on cache les sous-menus*/
+#block-cfdt-theme-main-menu li.menu-item--expanded ul.menu{
+    display : none;
+}
+
+#block-cfdt-theme-main-menu li.menu-item, #block-cfdt-theme-main-menu li.menu-item > a{
+    font-family: 'GothamCondensed-Book',"Trebuchet MS",Arial,Helvetica,sans-serif;
+    color: #FFFFFF;
+    font-size : 1.5rem;
+}
+
+#block-cfdt-theme-main-menu li.menu-item--expanded {
+    font-size: 1.5rem;
+    margin-top: 6px !important;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+#block-cfdt-theme-main-menu li.menu-item--expanded:nth-child(4){
+    margin-left: 2.5rem;
+}
+
+#block-cfdt-theme-main-menu li.menu-item--expanded span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#block-cfdt-theme-main-menu li.menu-item > a, #block-cfdttheme-main-menu li.menu-item span a{
+    color: #FFFFFF;
+    font-size : 1.5rem;
+}
+
+#block-cfdt-theme-main-menu li.menu-item span i {
+    margin : 0.2rem 0.8rem 0 -0.8rem;
+    color : #e75c21;
+}
+
+#block-cfdt-theme-main-menu li.menu-item{
+    margin-top : -14px;
+}
+
+/* Menu contact*/
+#block-cfdt-theme-main-menu > div:nth-child(2) > ul:nth-child(3) > li:nth-child(5){
+    margin-left: 15rem;
+}
+
+/**/
+#block-cfdt-theme-main-menu li.menu-item:nth-child(7){
+    margin-left: 23em;
+}
+#block-cfdt-theme-main-menu #menu-burger, #block-cfdttheme-main-menu #menu-mobile, .block-menu.navigation.menu--account div.content div#menu-burger{
+    display: none;
+}
+#block-cfdt-theme-pieddepage #menu-burger, .block-menu.navigation.menu--footer div.content div#menu-burger {
+    display: none;
+}
+#block-cfdt-theme-main-menu li.menu-item--expanded {
+    position : relative;
+}
+#block-cfdt-theme-main-menu li.menu-item--expanded > ul {
+	display: flex;
+	background-color: #e75c21;
+	height: auto;
+	flex-direction: column;
+	width: 14rem;
+	top: 41px;
+	position: absolute;
+	left: 0px;
+	z-index: 999;
+        padding-bottom : 10px;
+}
+
+#block-cfdt-theme-main-menu li.menu-item--expanded > ul li {
+    margin-top : -20px;
+}
+
+#block-cfdt-theme-main-menu li.menu-item--expanded > ul li a {
+	display: block;
+}
+/*Bouton contact*/
+#block-cfdt-theme-main-menu > div.content > ul > li:nth-child(5){
+    position : absolute;
+    top: -100px;
+    right: 150px;
+    height:50px;
+    background-image: url('../../images/bg-btn-orange.png');
+}
+#block-cfdt-theme-main-menu > div.content > ul > li:nth-child(5) > span > a {
+    margin-top: -8px;
+    margin-right: 0.3rem;
+    color:#e75c21 !important;
+}
+#block-cfdt-theme-main-menu > div.content > ul > li:nth-child(5):hover > span > a,
+#block-cfdt-theme-main-menu > div.content > ul > li:nth-child(5):hover span i {
+    color: #000000 !important;
+}
+/*Bouton adhérer*/
+#block-cfdt-theme-main-menu > div.content > ul > li:nth-child(6){
+    position : absolute;
+    top: -100px;
+    right: 0px;
+    height:50px;
+    background-image: url('../../images/bg-btn-grey.png');
+}
+#block-cfdt-theme-main-menu > div.content > ul > li:nth-child(6) > span > a {
+    margin-top: -8px;
+    margin-right: 0.3rem;
+    color:#e75c21 !important;
+}
+#block-cfdt-theme-main-menu > div.content > ul > li:nth-child(6):hover > span > a,
+#block-cfdt-theme-main-menu > div.content > ul > li:nth-child(6):hover span i {
+    color : #000000 !important;
+}
+.overlay {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay .closebtn {
+    /*position: absolute;*/
+    top: -20px;
+    right: 1rem;
+    font-size: 50px;
+}
+
+.overlay a {
+    padding: 12px;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 5%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay-content ul li {
+    list-style-type: none;
+    margin-bottom: 15px;
+}
+
+.overlay-content ul li a, .overlay-content ul li span {
+    font-size : 1.3rem !important;
+    color : #FFFFFF !important;
+}
+
+.overlay-content ul li span {
+    margin-bottom: 17px !important;
+    display: block;
+}
+
+/*FOOTER*/
+li#footer-reseaux-sociaux{
+    width: 30%;
+}
+a#footer-facebook-picto{
+    display: inline-block;
+    text-indent: 0;
+    padding: 0;
+    line-height: 0;
+    width: 8%;
+    margin-right: 2rem;
+    margin-left: 5rem;
+}
+a#footer-instagram-picto {
+    display: inline-block;
+    width: 13.6%;
+}
+
+/*mobile*/
+@media all and (max-width: 768px) {
+    #block-cfdt-theme-main-menu{
+        margin-top: 10px;
+        border-radius: 0px;
+    }
+
+    #block-cfdt-theme-main-menu #menu-burger{
+        margin-top: 0px;
+        margin-left: 1rem;
+        color: #FFF;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+
+    #block-cfdt-theme-main-menu #menu-burger a {
+        color: #FFF;
+        margin-right: 1rem;
+        font-size: 2rem;
+    }
+
+    #block-cfdt-theme-main-menu #menu-burger span {
+        font-size: 1.2rem;
+        display: inline-block;
+    }
+    
+    /* footer */
+    li#footer-reseaux-sociaux{
+        width: 100%;
+        text-align: center;
+    }
+    .site-footer__top .content .menu {
+        flex-direction: column;
+    }
+    a#footer-facebook-picto{
+        margin-right: 0;
+        margin-left: 0;
+    }
+}

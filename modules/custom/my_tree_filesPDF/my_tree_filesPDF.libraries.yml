@@ -1,0 +1,12 @@
+my-tree-filesPDF:
+  version: 1.x
+
+  css:
+    theme:
+      css/my_tree_filesPDF.css: {}
+  js:
+    js/accordion.js: {}
+
+  dependencies:
+    - core/jquery
+    - core/drupal

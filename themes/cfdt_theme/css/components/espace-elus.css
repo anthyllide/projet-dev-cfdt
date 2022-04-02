@@ -1,0 +1,75 @@
+@font-face {
+font-family: 'GothamCondensed-bold';
+src: url('../../font/GothamCondensed-Bold.otf') format('truetype');
+}
+
+@font-face {
+font-family: 'GothamCondensed-book';
+src: url('../../font/GothamCondensed-Book.otf') format('truetype');
+}
+
+@font-face {
+font-family: 'GothamCondensed-light';
+src: url('../../font/GothamCondensed-Light.otf') format('truetype');
+}
+
+@font-face {
+font-family: 'GothamCondensed-medium';
+src: url('../../font/GothamCondensed-Medium.otf') format('truetype');
+}
+
+
+
+
+.espace-elus#blocIntro {
+	display: flex;
+	align-items: center;
+	font-size: 1.8em;
+	font-weight: bold;
+	color: #e75c21;
+}
+
+.espace-elus#blocIntro img{
+	margin-right: 3rem;
+}
+
+.espace-elus.exposant {
+	margin-top : 30px;
+	font-size: 0.88em;
+	font-style: italic;
+}
+
+div.espace-elus table#tableNAO  {
+	width: 85%;
+	font-family: GothamCondensed-light;
+	font-size: 1.2rem;
+	border-color : #e75c21 ;
+}
+
+div.espace-elus table#tableNAO th {
+	text-align: center;
+	background-color : #e75c21;
+	border : solid 1px #cccccc;
+}
+
+div.espace-elus table#tableNAO td {
+	border : solid 1px #e75c21;
+	text-align:  center;
+}
+
+
+
+/* version mobile */
+@media screen and (max-width: 485px){
+	.espace-elus#blocIntro {
+		flex-direction: column;
+		font-size: 1.5em;
+		padding-right: 0 !important;
+	}
+
+	.espace-elus#blocClic {
+		text-align: center;
+		padding-right: 0 !important;
+	}
+
+}

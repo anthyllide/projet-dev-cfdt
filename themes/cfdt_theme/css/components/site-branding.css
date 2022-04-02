@@ -1,0 +1,113 @@
+/**
+ * @file
+ * Visual styles for the site branding block in Bartik.
+ */
+
+.site-branding__logo {
+    display: inline-block;
+    margin-right: 1em; /* LTR */
+    margin-bottom: 0.286em;
+    border-bottom: 0;
+}
+[dir="rtl"] .site-branding__logo {
+    margin-right: 0;
+    margin-left: 1em;
+}
+.site-branding__text {
+    display: inline-block;
+    vertical-align: top;
+    position : relative;
+}
+/* Bloc réseaux sociaux*/
+#bloc-reseaux-sociaux {
+    position: absolute;
+    left: 35rem;
+    top: 15px;
+    background-color: #eaeaea;
+    width: 15rem;
+    padding: 3px 0.8rem;
+}
+#bloc-reseaux-sociaux > div {
+    margin-top: -12px;
+    padding-left: 2rem;
+    text-align: center;
+}
+#bloc-reseaux-sociaux a {
+    display: inline-block;
+    margin-right: 2rem;
+}
+#bloc-reseaux-sociaux img#facebook-logo{
+    width: 2.8rem;
+}
+#bloc-reseaux-sociaux img#instagram-logo{
+    width: 3rem;
+}
+#bloc-reseaux-sociaux p {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    font-style: oblique;
+    color: #07684d;
+}
+@media all and (min-width: 461px) {
+  .site-branding__text {
+    margin-bottom: 1.857em;
+  }
+}
+
+@media all and (min-width: 901px) {
+  .site-branding__text {
+    padding: 1.286em 0 0;
+  }
+}
+.site-branding__name {
+  font-size: 1.6em;
+  color: #686868;
+  line-height: 1;
+  padding-top: 30px;
+}
+
+@media all and (min-width: 901px) {
+  .site-branding__name {
+    font-size: 1.821em;
+    padding-top: 10px;
+  }
+}
+.site-branding__slogan {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.3em;
+  margin-top: 7px;
+  word-spacing: 0.1em;
+  font-style: italic;
+}
+
+/* POUR MOBILE */
+@media screen and (max-width: 485px){
+      .site-branding__logo {
+        text-align: center;
+        width:100%;
+      }
+      .site-branding__logo img {
+        width:20%;
+      }
+      .site-branding__text {
+        width:100%;
+      }
+      .site-branding__slogan  {
+        text-align: center;
+        padding-top: 0px;
+        margin-top: 0px;
+        font-size: 1.2em;
+      }
+      .site-branding__name {
+      font-size: 1.3em;
+      padding-top: 5px;
+      text-align: center;
+      font-weight: bold;
+      }
+    #bloc-reseaux-sociaux {
+        position: inherit;
+        margin: 15px auto 5px auto;
+    }
+
+}

@@ -1,0 +1,21 @@
+.accordion:after {
+  content: '\0002B'; /* Unicode character for arrow */
+  font-size: 2.5rem;
+  float: right;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.blocDetail {
+  display: none;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}

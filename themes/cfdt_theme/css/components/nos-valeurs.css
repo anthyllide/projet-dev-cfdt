@@ -1,0 +1,30 @@
+#intro-valeurs {
+	margin-left: 2rem;
+	padding-top: 20px;
+	font-size: 1.6rem;
+	text-align: center;
+	width:80%;
+}
+
+#intro-valeurs span {
+	font-size: 3rem;
+	text-shadow: 0.05em 0.04em 0.05em #e75c21;
+}
+
+#videoCFDTPres {
+    margin-left: 2rem;
+    margin-top: 40px;
+    width: 80%;
+    height:0;
+    padding-bottom: 45%;
+    overflow: hidden;
+    position : relative;
+}
+
+#videoCFDTPres iframe {
+	height : 90%;
+	width : 90%;
+	position: absolute;
+	top : 0;
+	left : 0;
+}

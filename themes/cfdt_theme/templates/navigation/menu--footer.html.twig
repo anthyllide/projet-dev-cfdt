@@ -1,0 +1,42 @@
+{% import _self as menus %}
+
+{#
+  We call a macro which calls itself to render the full tree.
+  @see https://twig.symfony.com/doc/1.x/tags/macro.html
+#}
+{{ menus.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      <ul{{ attributes.addClass('menu') }}>
+    {% else %}
+      <ul class="menu">
+    {% endif %}
+    {% for item in items %}
+      {%
+        set classes = [
+          'menu-item',
+          item.is_expanded ? 'menu-item--expanded',
+          item.is_collapsed ? 'menu-item--collapsed',
+          item.in_active_trail ? 'menu-item--active-trail',
+        ]
+      %}
+      <li{{ item.attributes.addClass(classes) }}>
+        {{ link(item.title, item.url) }}
+        {% if item.below %}
+          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+        {% endif %}
+      </li>
+    {% endfor %}
+    <li id="footer-reseaux-sociaux">
+        Retrouvez-nous sur les réseaux sociaux :
+        <div>
+            <a id="footer-facebook-picto" target="blank" title="Accéder à notre page Facebook" href="https://www.facebook.com/CFDT.Credit.Agricole.des.Savoie"><img src="/themes/cfdt_theme/images/facebook-white-picto.png"/></a>
+            <a id="footer-instagram-picto" target="blank" title="Accéder à notre page Instagram" href="https://www.instagram.com/cfdt_du_cads"><img alt="CDFT credit agricole savoie Instagram" src="/themes/cfdt_theme/images/instagram-white-picto.png"/></a>
+        </div>
+        </li>
+    </ul>
+  {% endif %}
+{% endmacro %}

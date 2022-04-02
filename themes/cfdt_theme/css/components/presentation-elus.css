@@ -1,0 +1,152 @@
+/* Blocs presentation élus PC */
+
+.presentations {
+    margin : 20px 0;
+    display : flex;
+    justify-content: space-between;
+}
+
+.pres {
+    height : 300px;
+    width :25%;
+    cursor : pointer;
+    padding-bottom: 5px;
+}
+
+.front {
+    border : 2px solid #000000;
+    border-radius: 3px;
+    background-color: #cecece;
+}
+
+.front p {
+    text-align: center;
+}
+
+.back {
+    border : 2px solid #000000;
+    border-radius: 3px;
+    background-color: #efeef3;
+}
+
+.back span {
+    font-size: 0.9em;
+}
+
+.front h4 {
+    height : 18px;
+    line-height: 18px;
+    width : 20%;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #fdfdff;
+    text-align: center;
+    margin : 5px auto;
+    color : #404040;
+}
+
+.front h5, .back h5 {
+    height : 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #fdfdff;
+    text-align: center;
+    line-height: 30px;
+    color : #404040;
+    margin-top : 15px;
+}
+
+.front figure {
+    margin : 3px auto;
+    width: 100%;
+    text-align: center;
+}
+
+.front figure img {
+    max-width: 100%;
+    max-height: 120px;
+}
+
+.front p {
+    padding-top : 3px;
+    padding-bottom: 3px;
+    font-size: 0.8em;
+    font-style: italic;
+    font-weight: bolder;
+    text-align: center;
+    padding-right: 1% !important;
+}
+
+.back ul {
+    list-style-type: circle;
+    margin: 0 auto;
+    padding-top: 2px;
+    padding-left: 1.2em;
+    overflow: hidden;
+    font-size: 0.8em;
+    height : 230px;
+}
+
+.back a {
+    display : block;
+    color: #fff;
+    background-color: #598dbb;
+    border: 1px solid #598dbb;
+    font-size: 0.8rem;
+    line-height: 1.4rem;
+    border-radius: 0.70rem;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    width: 80%;
+    margin : 5px auto;
+}
+
+.back a:hover {
+    background-color: #5eb5e0;
+    border : 1px solid #5eb5e0;
+}
+
+li.lien_pres_suite {
+    list-style-type: none;
+}
+
+li.lien_pres_suite > a {
+    background-color: transparent;
+    border: none !important;
+    font-size: 1rem;
+    padding-left: 45%;
+}
+
+li.lien_pres_suite > a i {
+    margin-left: 0.8em;
+}
+
+li.lien_pres_suite > a:hover {
+    text-decoration: underline;
+    background-color: transparent;
+    border: none !important;
+    color : #cecece;
+}
+
+/* Blocs presentation élus mobile */
+
+@media screen and (max-width: 800px) {
+    .presentations {
+        margin : 0px;
+        display : flex;
+        flex-direction: column;
+    }
+
+    .pres {
+        width :100%;
+        margin-bottom: 20px;
+    }
+
+    #mes_realisations + p {
+        margin-bottom: 20px;
+    }
+}

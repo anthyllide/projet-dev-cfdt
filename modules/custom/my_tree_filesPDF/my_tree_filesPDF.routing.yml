@@ -1,0 +1,8 @@
+MyTreeFilesPDF.displaylistPDF:
+  path: '/user/listPDF/{theme}'
+  defaults:
+    _controller: '\Drupal\my_tree_filesPDF\Controller\MyTreeFilesPDFController::displaylistPDF'
+    _title: 'documents PDF'
+  requirements:
+    _permission: 'view PDF files list'
+    

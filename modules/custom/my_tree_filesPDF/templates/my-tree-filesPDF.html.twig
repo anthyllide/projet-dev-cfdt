@@ -1,0 +1,57 @@
+{{ attach_library('my_tree_filesPDF/my-tree-filesPDF') }}
+
+<div class="listPDF">
+
+	{% if title == "Qui fait quoi" %}
+
+	<h2>{{ title }} ?</h2>
+
+	{% else %}
+
+	<h2>{{ title }}</h2>
+
+	{% endif %}
+
+	<p>Cliquez sur le document qui vous intéresse pour l’afficher (les mises à jour seront à disposition au fur et à mesure).</p>
+
+		<ul>
+			{% for oneFile, indiceNew in files_tab1 %}
+
+				<li><a target="blank" 
+					href="https://www.cfdt-ca-des-savoie.fr/sites/default/files/pdf/{{ title }}/{{ oneFile }}.pdf" 
+					title="Télécharger le document"><div>{{ oneFile }} </div> <div class="pdfPicto">{% if indiceNew == true %}<span>new !</span>{% endif %}<img src="https://www.cfdt-ca-des-savoie.fr/{{ repImg }}/images/pdf.png"/></div></a>
+				</li>
+
+			{% endfor %}
+
+		</ul>
+
+
+		{% for topic, sub_files_tab in files_tab2 %} {# lecture du tableau files_tab2 #}
+
+			{% if topicNew_tab[topic] == true %} {# si la sous-catégorie a un "true" dans le tableau des new #}
+
+				<h3 class="accordion">{{ topic }} <span>(new !)</span></h3>
+
+			{% else %}
+				
+				<h3 class="accordion">{{ topic }}</h3>
+
+			{% endif %}
+	
+
+			<div class="blocDetail">
+						
+				<ul>
+					{% for oneFile, indiceNew in sub_files_tab %} {# lecture du tableau sub_files_tab #}
+
+						<li>
+							<a target="blank" href="https://www.cfdt-ca-des-savoie.fr/sites/default/files/pdf/{{ title }}/{{ topic }}/{{ oneFile }}" title="Télécharger le document"><div>{{ oneFile}} </div> <div class="pdfPicto">{% if indiceNew == true %}<span>new !</span>{% endif %} <img src="https://www.cfdt-ca-des-savoie.fr/{{ repImg }}/images/pdf.png"/></div></a>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>	
+					
+		{% endfor %}
+        		
+</div>

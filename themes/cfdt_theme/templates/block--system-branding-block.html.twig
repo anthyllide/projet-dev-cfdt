@@ -1,0 +1,42 @@
+{% extends "block.html.twig" %}
+{#
+/**
+ * @file
+ * Bartik's theme implementation for a branding block.
+ *
+ * Each branding element variable (logo, name, slogan) is only available if
+ * enabled in the block configuration.
+ *
+ * Available variables:
+ * - site_logo: Logo for site as defined in Appearance or theme settings.
+ * - site_name: Name for site as defined in Site information settings.
+ * - site_slogan: Slogan for site as defined in Site information settings.
+ */
+#}
+{% set attributes = attributes.addClass('site-branding') %}
+{% block content %}
+  {% if site_logo %}
+    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-branding__logo">
+      <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
+    </a>
+  {% endif %}
+  {% if site_name or site_slogan %}
+    <div class="site-branding__text">
+      {% if site_name %}
+        <div class="site-branding__name">
+          <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
+        </div>
+      {% endif %}
+      {% if site_slogan %}
+        <div class="site-branding__slogan">{{ site_slogan }}</div>
+      {% endif %}
+    </div>
+  {% endif %}
+    <div id="bloc-reseaux-sociaux">
+        <p>Retrouvez-nous sur les réseaux sociaux !</p>
+        <div>
+            <a target="blank" title="Accéder à notre page Facebook" href="https://www.facebook.com/CFDT.Credit.Agricole.des.Savoie"><img id="facebook-logo" alt="CDFT credit agricole savoie Facebook" src="/themes/cfdt_theme/images/facebook-logo.png"/></a>
+            <a target="blank" title="Accéder à notre page Instagram" href="https://www.instagram.com/cfdt_du_cads"><img id="instagram-logo" alt="CDFT credit agricole savoie Instagram" src="/themes/cfdt_theme/images/instagram-logo.png"/></a>
+        </div>
+    </div>
+{% endblock %}
